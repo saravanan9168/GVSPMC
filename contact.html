@@ -69,15 +69,15 @@
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
-              <li class="scroll-to-section"><a href="index.html" class="active">Home</a></li>
+              <li class="scroll-to-section"><a href="index.html" >Home</a></li>
               <li class="scroll-to-section"><a href="about.html">About Us</a></li>
               <li class="scroll-to-section"><a href="services.html">Services</a></li>
               <li class="scroll-to-section"><a href="portfolio-grid.html">Projects</a></li> 
-              <li class="scroll-to-section"><a href="contact.html">Contact us</a></li> 
+              <li class="scroll-to-section"><a href="contact.html"class="active">Contact us</a></li> 
               <li class="scroll-to-section"><div class="main-red-button"><a href="contact.html">Get A Proposal</a></div></li> 
             </ul>        
             <a class='menu-trigger'>
-                <span>Menu</span>
+                <span>☰</span>
             </a>
             <!-- ***** Menu End ***** -->
           </nav>
@@ -327,38 +327,51 @@
 								<span class="b-line l-left line-h"></span>
 							</div>
 							<!-- Contact FORM -->
-							<form class="contact-form " id="contact">
-								<!-- IF MAIL SENT SUCCESSFULLY -->
-								<div id="success">
-									<div role="alert" class="alert alert-success">
-										<strong>Thanks</strong> for using our template. Your message has been sent.
-									</div>
-								</div>
-								<!-- END IF MAIL SENT SUCCESSFULLY -->
-								<div class="row">
-									<div class="col-lg-6">
-										<div class="form-field">
-											<input class="input-sm form-full" id="name" type="text" name="form-name" placeholder="Your Name">
-										</div>
-										<div class="form-field">
-											<input class="input-sm form-full" id="email" type="text" name="form-email" placeholder="Email" >
-										</div>
-										<div class="form-field">
-											<input class="input-sm form-full" id="mobile" type="text" name="form-subject" placeholder="Mobile Number">
-										</div>
-									</div>
-									<div class="col-lg-6">
-										<div class="form-field">
-											<textarea class="form-full" id="message" rows="7" name="form-message" placeholder="Your Message" ></textarea>
-										</div>
-									</div>
-									<div class="col-lg-12 mt-30">
-										<button class="btn-text" type="button" id="submit" name="button">
-											Send Message
-										</button>
-									</div>
-								</div>
-							</form>
+			<form class="contact-form" id="contact" action="https://formsubmit.co/info@gvspmc.com" method="POST">
+
+				<!-- FormSubmit Hidden Settings -->
+				<input type="hidden" name="_captcha" value="false">
+				<input type="hidden" name="_template" value="table">
+				<input type="hidden" name="_subject" value="New Contact Form Submission - GVS PMC">
+				<input type="hidden" name="_next" value="https://gvspmc.com/thankyou.html">
+
+				<!-- IF MAIL SENT SUCCESSFULLY -->
+				<div id="success" style="display:none;">
+					<div role="alert" class="alert alert-success">
+						<strong>Thank you!</strong> Your message has been sent successfully.
+					</div>
+				</div>
+				<!-- END IF -->
+
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="form-field">
+							<input class="input-sm form-full" id="name" type="text" name="name" placeholder="Your Name" required>
+						</div>
+
+						<div class="form-field">
+							<input class="input-sm form-full" id="email" type="email" name="email" placeholder="Email" required>
+						</div>
+
+						<div class="form-field">
+							<input class="input-sm form-full" id="mobile" type="text" name="phone" placeholder="Mobile Number" required>
+						</div>
+					</div>
+
+					<div class="col-lg-6">
+						<div class="form-field">
+							<textarea class="form-full" id="message" rows="7" name="message" placeholder="Your Message" required></textarea>
+						</div>
+					</div>
+
+					<div class="col-lg-12 mt-30">
+						<button class="btn-text" type="submit" id="submit" name="button">
+							Send Message
+						</button>
+					</div>
+				</div>
+			</form>
+
 							<!-- END Contact FORM -->
 						</div>
 
@@ -450,7 +463,7 @@
         <div class="col-md-4">
           <div class="widget widget_text">
             <h2 class="widget-title"><span>ABOUT US</span></h2>
-            <div class="textwidget"> <a href="index.html" class="footer-logo"> <img src="assets/images/footer-logo.png" alt="Awesome Logo"> </a>
+            <div class="textwidget"> <a href="index.html" class="footer-logo"> <img src="assets/images/LOGOC.jpeg" alt="Awesome Logo"> </a>
 				<p class="mar">We at GVS PMC ENGINEERS AND CONSULTANTS, with our extensive hospitality construction
 					knowledgeable resources and customized solutions add up to measurable value for 
 					our clients.</p>
@@ -498,7 +511,7 @@
           <div class="bottom-bar-content text-center">
             <div class="bottom-bar-content text-center">
 				<!-- Bottom Footer -->
-	<p>&copy; GVS PMC 2022- All Rights Reserved | Materialized by <a href="https://magniontechnologies.co.in"> Magnion Technology Factory</p>
+	<p>&copy; GVS PMC <span id="year"></span>- All Rights Reserved </p>
 </div><!-- Bottom Footer /- -->
           <!-- /.bottom-bar-content -->
           <!--div class="bottom-bar-menu">
