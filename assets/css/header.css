@@ -1030,7 +1030,7 @@ body {
 
 .header-area {
   background: #ffffff;
-  position: fixed;
+  position: relative; 
   top: 0;
   left: 0;
   width: 100%;
@@ -1044,6 +1044,7 @@ body {
 /* Center the header content */
 .header-area .container {
   width: 100%;
+  height: 40px;
 }
 
 /* Main nav centered within the container */
