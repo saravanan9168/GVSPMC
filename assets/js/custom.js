@@ -712,12 +712,25 @@ if (mapWrap.length) {
 
 
 document.addEventListener('DOMContentLoaded', function () {
+
     const menuTrigger = document.querySelector('.menu-trigger');
     const nav = document.querySelector('.main-nav .nav');
 
     if (menuTrigger && nav) {
-      menuTrigger.addEventListener('click', function () {
+
+      // Toggle menu on icon click
+      menuTrigger.addEventListener('click', function (e) {
+        e.stopPropagation();  
         nav.classList.toggle('show');
       });
+
+      // Close menu when clicking outside
+      document.addEventListener('click', function (e) {
+        if (!nav.contains(e.target)) {
+          nav.classList.remove('show');
+        }
+      });
     }
-  });
+
+});
+
