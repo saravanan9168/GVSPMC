@@ -1182,9 +1182,130 @@ body {
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
     margin-top: 10px;
     padding: 15px 0;
+	color: red;
   }
 
   .main-nav .nav.show {
     display: flex;
+  }
+  .menu-trigger.hide {
+  display: none !important;
+}
+
+}
+
+/* ====== NEW HEADER LAYOUT ====== */
+
+.header-area {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  background: #ffffff;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+  padding: 10px 0;
+}
+
+/* Ensure page content starts below header */
+body {
+  padding-top: 100px;  /* adjust if header taller/shorter */
+}
+
+
+/* LOGO */
+.main-nav .logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.main-nav .logo img {
+  height: 60px;
+  margin-right: 12px;
+}
+
+.main-nav .logo h3 {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.2;
+  color: #9f262d; /* your brand color */
+}
+
+/* NAV LINKS */
+.main-nav .nav {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav .nav li {
+  margin-left: 20px;
+}
+
+/* 👉 This makes nav text red */
+.main-nav .nav a {
+  color: #9f262d;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.main-nav .nav a:hover,
+.main-nav .nav a.active {
+  color: #000000;
+}
+
+/* "Get A Proposal" button inside nav */
+.main-nav .main-red-button a {
+  padding: 8px 18px;
+  border-radius: 4px;
+  background: #9f262d;
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+/* MENU TRIGGER (mobile) */
+.menu-trigger {
+  display: none;
+  cursor: pointer;
+  font-size: 28px;
+  margin-left: 16px;
+}
+
+.menu-trigger span {
+  display: inline-block;
+}
+
+/* ====== MOBILE ====== */
+@media (max-width: 991px) {
+  .main-nav {
+    align-items: center;
+  }
+
+  .main-nav .nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background: #ffffff;
+    display: none;
+    flex-direction: column;
+    padding: 15px 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  }
+
+  .main-nav .nav.show {
+    display: flex;
+  }
+
+  .main-nav .nav li {
+    margin: 10px 0;
+  }
+
+  .menu-trigger {
+    display: block;
   }
 }
