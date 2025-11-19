@@ -618,6 +618,23 @@ button:focus {
 .top-space {
 	padding-top: 218px;
 }
+/* Laptop/Desktop only */
+@media (min-width: 992px) {
+  .padding {
+    padding-top: 90px;
+    padding-bottom: 90px;
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+
+/* Mobile/Tablet — Reduce padding */
+@media (max-width: 991px) {
+  .padding {
+    padding: 20px 15px; /* or 0px if you want no padding */
+  }
+}
+
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
 	.top-space {
 		padding-top: 100px;
