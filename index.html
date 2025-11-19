@@ -71,8 +71,8 @@
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
-              <li class="scroll-to-section"><a href="index.html" class="active">Home</a></li>
-              <li class="scroll-to-section"><a href="about.html">About Us</a></li>
+              <li class="scroll-to-section"><a href="index.html" >Home</a></li>
+              <li class="scroll-to-section"><a href="about.html"class="active">About Us</a></li>
               <li class="scroll-to-section"><a href="services.html">Services</a></li>
               <li class="scroll-to-section"><a href="portfolio-grid.html">Projects</a></li> 
               <li class="scroll-to-section"><a href="contact.html">Contact us</a></li> 
@@ -817,38 +817,38 @@
                                     <div class="form-wrapper">
                                         
                                         <form id="contactForm" action="https://formsubmit.co/info@gvspmc.com" method="POST" novalidate>
+											<div class="form-group">
+												<label class="form-label">Name</label>
+												<input type="text" name="name" class="form-input" required>
+												<div class="error-message"></div>
+											</div>
 
-                                            <div class="form-group">
-                                                <label class="form-label">Name</label>
-                                                <input type="text" name="name" class="form-input" required>
-                                                <div class="error-message"></div>
-                                            </div>
+											<div class="form-group">
+												<label class="form-label">Company</label>
+												<input type="text" name="company" class="form-input">
+											</div>
 
-                                            <div class="form-group">
-                                                <label class="form-label">Company</label>
-                                                <input type="text" name="company" class="form-input">
-                                            </div>
+											<div class="form-group">
+												<label class="form-label">Phone Number</label>
+												<input type="text" name="phone" class="form-input" required>
+												<div class="error-message"></div>
+											</div>
 
-                                            <div class="form-group">
-                                                <label class="form-label">Phone Number</label>
-                                                <input type="text" name="phone" class="form-input" required pattern="[0-9]{10}">
-                                                <div class="error-message"></div>
-                                            </div>
+											<div class="form-group">
+												<label class="form-label">Email</label>
+												<input type="email" name="email" class="form-input" required>
+												<div class="error-message"></div>
+											</div>
 
-                                            <div class="form-group">
-                                                <label class="form-label">Email</label>
-                                                <input type="email" name="email" class="form-input" required>
-                                                <div class="error-message"></div>
-                                            </div>
+											<div class="form-group">
+												<label class="form-label">Message</label>
+												<textarea name="message" class="form-textarea" required></textarea>
+												<div class="error-message"></div>
+											</div>
 
-                                            <div class="form-group">
-                                                <label class="form-label">Message</label>
-                                                <textarea name="message" class="form-textarea" required></textarea>
-                                                <div class="error-message"></div>
-                                            </div>
+											<button type="submit" class="submit-btn">Submit</button>
+										</form>
 
-                                            <button type="submit" class="submit-btn">Submit</button>
-                                        </form>
 
                                     </div>
                                 </div>
@@ -1111,7 +1111,7 @@
 						<div class="widget widget_text">
 							<h2 class="widget-title"><span>ABOUT US</span></h2>
 							<div class="textwidget">
-								<a href="index.html" class="footer-logo"> <img src="assets/images/footer-logo.png" alt="GVS Logo"> </a>
+								<a href="index.html" class="footer-logo"> <img src="assets/images/LOGOC.jpeg" alt="GVS Logo"> </a>
 								<p class="mar">We at GVS PMC ENGINEERS AND CONSULTANTS, with our extensive hospitality construction
 									knowledgeable resources and customized solutions add up to measurable value for 
 									our clients.</p>
@@ -1161,8 +1161,7 @@
 					<div class="bottom-bar-inner-wrap">
 						<div class="bottom-bar-content text-center">
 							<!-- Bottom Footer -->
-							<p>&copy; GVS PMC 2022- All Rights Reserved | Materialized by <a href="https://magniontechnologies.co.in"> Magnion Technology Factory</p>
-						</div><!-- Bottom Footer /- -->
+							<p>&copy; GVS PMC <span id="year"></span>- All Rights Reserved</p>
 							<!-- /#copyright -->
 						
 						<!-- /.bottom-bar-content -->
@@ -1217,7 +1216,7 @@
 		<!-- custom Js -->
 		<script src="assets/js/custom.js" type="text/javascript"></script>
 		<script src="../../../hosting_popup/js/hots_popup.js"></script>
-
+		
 	</body>
 </html>
 
